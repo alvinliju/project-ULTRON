@@ -3,7 +3,7 @@
 
 start:
     cli ;Clear interrutps
-    mov ax, 0x00
+    mov ax, 0x00 ; Find an efficient way 
     mov ds, ax
     mov es, ax
     mov ss, ax
@@ -12,7 +12,7 @@ start:
     mov si, msg
 
 print:
-    loadsb ; Loads byte at ds:si to AL register and increments SI
+    lodsb ; Loads byte at ds:si to AL register and increments SI
     cmp al, 0
     je done
     mov ah, 0x0E
